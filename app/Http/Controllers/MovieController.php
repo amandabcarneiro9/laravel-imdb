@@ -9,8 +9,8 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movie::first();
-
-        return $movies->genres[0]->name;
+        $movies = Movie::with('country')->first();
+        dd($movies);
+        // return dd($movies->;
     }
 }

@@ -28,6 +28,6 @@ class Movie extends Model
 
     public function country()
     {
-        return $this->belongsToMany(Country::class, 'origin_countries');
+        return $this->belongsToMany(Country::class, 'movie_origin_country', 'movie_id', 'movie_origin_country_id');
     }
 }
