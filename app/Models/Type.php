@@ -11,8 +11,8 @@ class Type extends Model
 
     protected $table = 'movie_types';
 
-    public function Movie()
+    public function movie()
     {
-        return $this->belongsTo(Movie::class);
+        return $this->hasMany(Movie::class);
     }
 }

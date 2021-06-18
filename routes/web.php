@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/movies', 'MovieController@index');
+Route::get('/movies/search', 'MovieController@show')->name('search');

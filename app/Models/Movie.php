@@ -10,6 +10,7 @@ class Movie extends Model
 {
     use HasFactory;
 
+    protected $table = 'movies';
     public function genres()
     {
         return $this->belongsToMany(Genre::class);
@@ -23,7 +24,7 @@ class Movie extends Model
 
     public function types()
     {
-        return $this->hasMany(Type::class, 'movie_types');
+        return $this->belongsTo(Type::class, 'movie_type_id');
     }
 
     public function country()
